@@ -1,14 +1,14 @@
 [project]
-name = "body-fat-predictor-api"
+name = "body-fat-prediction-api"
 version = "0.1.0"
-requires-python = ">=3.13"
+requires-python = ">=3.12,<3.14"
 
 dependencies = [
-    "fastapi[standard]==0.140.1",
+    "fastapi[standard]==0.141.1",
     "joblib==1.5.3",
-    "pydantic==2.13.4",
-    "pandas==2.1.4",
-    "numpy==2.5.1"
+    "numpy==2.5.1",
+    "pandas==3.0.5",
+    "scikit-learn==1.9.0",
 ]
 
 [build-system]
