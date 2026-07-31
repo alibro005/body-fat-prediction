@@ -9,7 +9,8 @@ const category = document.getElementById("category");
 const description = document.getElementById("description");
 const progressFill = document.getElementById("progressFill");
 
-const API_URL = "http://127.0.0.1:8000/predict";
+// const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://body-fat-prediction-api.fastapicloud.dev/predict";
 
 // Hide result initially
 resultCard.style.display = "none";
