@@ -28,11 +28,11 @@ A machine learning web application that predicts **body fat percentage** based o
 ## Project Structure
 
 ```text
-.
-├── backend/
-├── frontend/
-├── notebook/
-└── README.md
+body-fat-prediciton
+    ├── backend/
+    ├── frontend/
+    ├── notebook/
+    └── README.md
 
 ```
 
