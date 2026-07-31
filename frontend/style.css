@@ -1,0 +1,566 @@
+/* ==========================
+   Google Font
+========================== */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  --bg: #f3f7fc;
+
+  --card: #ffffff;
+
+  --border: #e5e7eb;
+
+  --text: #0f172a;
+
+  --muted: #64748b;
+
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+  --radius: 18px;
+}
+
+/* ==========================
+   Reset
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(180deg, #eff6ff, #f8fafc);
+
+  color: var(--text);
+}
+
+/* ==========================
+   Container
+========================== */
+
+.container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 40px 20px 60px;
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.tag {
+  display: inline-block;
+
+  background: #dbeafe;
+
+  color: var(--primary);
+
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+.hero p {
+  max-width: 760px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+  color: var(--muted);
+}
+
+/* ==========================
+   Main Card
+========================== */
+
+.card {
+  background: var(--card);
+
+  border-radius: var(--radius);
+
+  padding: 40px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 35px;
+}
+
+/* ==========================
+   Sections
+========================== */
+
+.section {
+  margin-bottom: 35px;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+
+  margin-bottom: 20px;
+
+  color: var(--primary);
+}
+
+/* ==========================
+   Grid
+========================== */
+
+.grid {
+  display: grid;
+
+  gap: 20px;
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+
+  font-weight: 600;
+
+  font-size: 0.95rem;
+}
+
+.input-group input {
+  padding: 14px 16px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  transition: 0.25s;
+
+  background: #fff;
+}
+
+.input-group input:focus {
+  outline: none;
+
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.input-group input::placeholder {
+  color: #94a3b8;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 16px;
+
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+
+  border: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: var(--primary);
+
+  color: white;
+
+  padding: 15px 28px;
+
+  border-radius: 12px;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #eef2ff;
+
+  color: var(--primary);
+
+  padding: 15px 28px;
+
+  border-radius: 12px;
+}
+
+.secondary-btn:hover {
+  background: #dbeafe;
+}
+
+/* ==========================
+   Loading State
+========================== */
+
+.primary-btn.loading {
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+/* ==========================
+   Result Card
+========================== */
+
+.result-card {
+  background: white;
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  padding: 35px;
+
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   RESULT CARD CONTENT
+========================================== */
+
+.result-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: var(--text);
+}
+
+.result-value {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+
+  margin-bottom: 18px;
+}
+
+.result-value span {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary);
+
+  line-height: 1;
+}
+
+.result-value small {
+  font-size: 1.4rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.category {
+  display: inline-block;
+
+  padding: 10px 24px;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  margin-bottom: 28px;
+
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* ==========================================
+   CATEGORY COLORS
+========================================== */
+
+.category.lean {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.category.healthy {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.category.high {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.category.obese {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.progress {
+  width: 100%;
+
+  height: 18px;
+
+  background: #e5e7eb;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  margin-bottom: 14px;
+}
+
+.progress-fill {
+  width: 0;
+
+  height: 100%;
+
+  background: linear-gradient(90deg, #3b82f6, #22c55e, #f59e0b, #ef4444);
+
+  transition: width 0.9s ease;
+}
+
+.progress-labels {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 0.85rem;
+
+  color: var(--muted);
+
+  margin-bottom: 22px;
+}
+
+.description {
+  max-width: 650px;
+
+  margin: auto;
+
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+footer p {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+}
+
+footer strong {
+  color: var(--primary);
+}
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.card,
+.result-card {
+  transition: 0.35s;
+}
+
+.card:hover,
+.result-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   BUTTON EFFECT
+========================================== */
+
+.primary-btn:active,
+.secondary-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  animation: fadeUp 0.7s ease;
+}
+
+.card {
+  animation: fadeUp 0.9s ease;
+}
+
+.result-card {
+  animation: fadeUp 1.1s ease;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+  .grid.three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .result-value span {
+    font-size: 3rem;
+  }
+
+  .progress-labels {
+    font-size: 0.75rem;
+  }
+}
+
+/* ==========================================
+   INPUT HOVER
+========================================== */
+
+.input-group input:hover {
+  border-color: #93c5fd;
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection {
+  background: #2563eb;
+  color: white;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

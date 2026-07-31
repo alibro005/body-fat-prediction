@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Body Fat Percentage Predictor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ================= Header ================= -->
+
+      <header class="hero">
+        <span class="tag"> AI Powered Prediction </span>
+
+        <h1>Body Fat Percentage Predictor</h1>
+
+        <p>
+          Estimate body fat percentage using body measurements and a machine
+          learning model. Enter your measurements below and receive an instant
+          prediction.
+        </p>
+      </header>
+
+      <!-- ================= Main Card ================= -->
+
+      <div class="card">
+        <form id="bodyfatForm">
+          <!-- Personal Information -->
+
+          <div class="section">
+            <h2>Personal Information</h2>
+
+            <div class="grid three">
+              <div class="input-group">
+                <label>Age</label>
+                <input type="number" name="Age" placeholder="Years" required />
+              </div>
+
+              <div class="input-group">
+                <label>Weight (lbs)</label>
+                <input
+                  type="number"
+                  step="0.1"
+                  name="Weight"
+                  placeholder="180"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label>Height (in)</label>
+                <input
+                  type="number"
+                  step="0.1"
+                  name="Height"
+                  placeholder="70"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Measurements -->
+
+          <div class="section">
+            <h2>Body Measurements</h2>
+
+            <div class="grid three">
+              <div class="input-group">
+                <label>Neck</label>
+                <input type="number" step="0.1" name="Neck" required />
+              </div>
+
+              <div class="input-group">
+                <label>Chest</label>
+                <input type="number" step="0.1" name="Chest" required />
+              </div>
+
+              <div class="input-group">
+                <label>Abdomen</label>
+                <input type="number" step="0.1" name="Abdomen" required />
+              </div>
+
+              <div class="input-group">
+                <label>Hip</label>
+                <input type="number" step="0.1" name="Hip" required />
+              </div>
+
+              <div class="input-group">
+                <label>Thigh</label>
+                <input type="number" step="0.1" name="Thigh" required />
+              </div>
+
+              <div class="input-group">
+                <label>Knee</label>
+                <input type="number" step="0.1" name="Knee" required />
+              </div>
+
+              <div class="input-group">
+                <label>Ankle</label>
+                <input type="number" step="0.1" name="Ankle" required />
+              </div>
+
+              <div class="input-group">
+                <label>Biceps</label>
+                <input type="number" step="0.1" name="Biceps" required />
+              </div>
+
+              <div class="input-group">
+                <label>Forearm</label>
+                <input type="number" step="0.1" name="Forearm" required />
+              </div>
+
+              <div class="input-group">
+                <label>Wrist</label>
+                <input type="number" step="0.1" name="Wrist" required />
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+
+          <div class="buttons">
+            <button type="button" id="fillSample" class="secondary-btn">
+              Fill Sample
+            </button>
+
+            <button type="submit" id="predictBtn" class="primary-btn">
+              Predict Body Fat
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- ================= Result ================= -->
+
+      <div class="result-card" id="resultCard">
+        <h2>Prediction Result</h2>
+
+        <div class="result-value">
+          <span id="predictionValue"> -- </span>
+
+          <small>%</small>
+        </div>
+
+        <div class="category" id="category">Waiting...</div>
+
+        <!-- Progress -->
+
+        <div class="progress">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="progress-labels">
+          <span>Lean</span>
+          <span>Healthy</span>
+          <span>High</span>
+          <span>Obese</span>
+        </div>
+
+        <p id="description" class="description">
+          Enter your measurements to receive a prediction.
+        </p>
+      </div>
+
+      <!-- ================= Footer ================= -->
+
+      <footer>
+        <p>
+          Powered by
+          <strong>FastAPI</strong>, <strong>Scikit-Learn</strong>, and
+          <strong>Random Forest Regression</strong>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
