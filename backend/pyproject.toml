@@ -1,0 +1,16 @@
+[project]
+name = "body-fat-predictor-api"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+dependencies = [
+    "fastapi[standard]==0.140.1",
+    "joblib==1.5.3",
+    "pydantic==2.13.4",
+    "pandas==2.1.4",
+    "numpy==2.5.1"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
